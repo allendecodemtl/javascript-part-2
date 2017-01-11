@@ -51,3 +51,14 @@ console.log(arr);
 // Create a function that can be used with Array.prototype.map. 
 // This function should take a number and return its square. 
 // Then, use this function with map on an array of numbers to check the result.
+
+var numbers = [1, 4, 9];
+var roots = numbers.map(function(num){
+    return num * num;
+});
+
+console.log(roots);
+
+// Create a function that can be used with Array.prototype.map. 
+// This function should be able to take an object and square its “num” property. 
+// Then, use this function with map on an array of objects each containming a “num” property.
