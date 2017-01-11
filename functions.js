@@ -85,3 +85,53 @@ console.log(newArr3);
 // Your function will return a function that will take two numbers and return the result of running operation on these numbers. 
 // The end result should let me do something like this:
 
+function operationMaker(operation){
+    
+    switch (operation) {
+        case 'add':
+            return function (a,b){
+                return a + b  
+            };
+            break;
+        case 'subtract':
+            return function (a,b){
+                return a - b  
+            };
+            break;
+        case 'mult':
+            return function (a,b){
+                return a * b  
+            };
+            break;
+        case 'div':
+            return function (a,b){
+                return a / b  
+            };
+            break;
+        default:
+            // code
+    }
+}
+
+var adder = operationMaker("add");
+var sum = adder(5,10);
+
+console.log(sum);
+
+
+var subtract = operationMaker("subtract");
+var subtractResult = subtract(5,10);
+
+console.log(subtractResult);
+
+
+var mult = operationMaker("mult");
+var multiply = mult(5,10);
+
+console.log(multiply);
+
+
+var div = operationMaker("div");
+var divResult = div(5,10);
+
+console.log(divResult);
